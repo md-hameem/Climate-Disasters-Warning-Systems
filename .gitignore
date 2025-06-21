@@ -11,6 +11,7 @@ __pycache__/
 D-Fire/
 *.nc
 *.h5
+*.pth 
 
 venv/
 # dependencies

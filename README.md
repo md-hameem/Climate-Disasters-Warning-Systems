@@ -1,6 +1,6 @@
 # Climate Disaster Warning System
 
-This repository contains the code, models, and supporting materials for detecting and analyzing climate-related disasters—specifically fire, flood, and sea-level rise events. The project integrates deep learning and geospatial data analysis to support early warning systems and climate research.
+This repository contains the code, models, and supporting materials for detecting and analyzing climate-related disasters—specifically fire, flood, sea-level rise, and earthquake events. The project integrates deep learning and geospatial data analysis to support early warning systems and climate research.
 
 ## 📁 Project Structure
 
@@ -25,6 +25,15 @@ model/
     CSR_GRACE_GRACE-FO_RL06_Mascons_all-corrections_v02.nc
     SLR_GRACE.ipynb
     Data/
+  Earthquake/
+    input/
+      test/...
+      sample_submission.csv
+      train.csv
+    earthquake_detection.ipynb
+    lgbm_flood_4.pkl
+    lgbm_importances.png
+    submission.csv
 .gitignore
 LICENSE
 README.md
@@ -51,11 +60,16 @@ requirements.txt
 * **Tools**: Data processing and visualization in Jupyter Notebooks
 * **Justification**: GRACE data offers precise Earth gravity measurements, enabling accurate inferences about sea-level and mass redistribution trends.
 
+### 🌎 Earthquake Detection
+
+* **Model**: LightGBM Regressor,  CatBoostRegressor, SVR, NuSVR, KernelRidge
+* **Approach**: Time-series or seismic data analysis for earthquake event detection and prediction
+* **Justification**: Deep learning models can capture temporal and spatial patterns in seismic data, improving the accuracy of earthquake detection and early warning.
+
 ## 📥 Datasets & Pretrained Models
 
 * **Fire & Flood Datasets**:
   Download from:
-
   * [Kaggle Fire Dataset](https://www.kaggle.com/datasets/phylake1337/fire-dataset)
   * [Kaggle Flood Dataset](https://www.kaggle.com/datasets/ratthachat/flood-image-dataset)
     Place files under:
@@ -65,6 +79,11 @@ requirements.txt
 * **Sea-Level Data**:
   Download from NASA’s GRACE portal:
   [NASA GRACE Data](https://podaac.jpl.nasa.gov/GRACE)
+
+* **Earthquake Data**:
+  [LANL Earthquake Prediction](https://www.kaggle.com/competitions/LANL-Earthquake-Prediction/data)
+  Place files under:
+  * `Earthquake Detection/...`
 
 * **Trained Models**:
   Pretrained models can be downloaded from this [Google Drive folder](https://drive.google.com/drive/folders/1uGfHQNVUJ4oqNp0-tL8cfA4jEjHz_Lxc?usp=sharing).
@@ -85,9 +104,13 @@ requirements.txt
 
 ### Sea-Level Rise
 
-* \[`SLR_GRACE.ipynb`]\(model/Sea-Level Rise/SLR\_GRACE.ipynb): Notebook for visualizing and analyzing NetCDF-formatted satellite data.
+* [`SLR_GRACE.ipynb`](model/Sea-Level Rise/SLR_GRACE.ipynb): Notebook for visualizing and analyzing NetCDF-formatted satellite data.
 * `CSR_GRACE_GRACE-FO_RL06_Mascons_all-corrections_v02.nc`: Satellite data file.
 * `Data/`: Additional supporting data.
+
+### Earthquake Detection
+
+* [`earthquake_detection.ipynb`](Earthquake/earthquake_detection.ipynb): Notebook for training and evaluating the earthquake detection model.
 
 ## 🚀 Getting Started
 
@@ -124,5 +147,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For questions, suggestions, or contributions, feel free to:
 
 * Open an issue or submit a pull request
-* Email: **[hamimmd555@gmail.com](mailto:hamimmd555@gmail.com)**
-
+* Email:

@@ -31,6 +31,7 @@ model/
 .gitignore
 LICENSE
 README.md
+requirements.txt
 ```
 
 ## Models Used
@@ -59,12 +60,8 @@ This project utilizes state-of-the-art deep learning models for climate disaster
   GRACE satellite data can be downloaded from the [NASA GRACE Data Portal](https://podaac.jpl.nasa.gov/GRACE).
 
 - **Trained Models:**  
-  Pretrained model files (e.g., `.h5`, `.pth`) may be too large for direct inclusion in this repository. You can download them from the following links or request access:
-  - Fire Detection ResNet50: [Download Link or Request Access]
-  - Flood Detection ResNet & ViT: [Download Link or Request Access]
-  - Place the downloaded models in their respective folders as shown in the project structure.
-
-> **Note:** Update the above links with your actual dataset/model URLs or instructions as needed.
+  Pretrained model files (e.g., `.h5`, `.pth`) may be too large for direct inclusion in this repository. You can download [TRAINED MODEL](https://drive.google.com/drive/folders/1uGfHQNVUJ4oqNp0-tL8cfA4jEjHz_Lxc?usp=sharing) from the following links or request access:
+  - Fire Detection ResNet50 & Flood Detection ResNet and ViT & SLR Detection; Place the downloaded models in their respective folders as shown in the project structure.
 
 ## Components
 
@@ -89,8 +86,7 @@ This project utilizes state-of-the-art deep learning models for climate disaster
 
 1. **Clone the repository**
    ```sh
-   git clone <your-repo-url>
-   cd <repo-folder>
+   git clone https://github.com/md-hameem/Climate-Disasters-Warning-Systems.git
    ```
 
 2. **Install dependencies**
@@ -123,4 +119,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 ---
 
 **Contact:**  
-For questions or contributions, please open an issue or submit a pull
+For questions or contributions, please open an issue or submit a pull or Mail me at: hamimmd555@gmail.com

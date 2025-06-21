@@ -29,7 +29,42 @@ model/
     Data/
     .ipynb_checkpoints/
 .gitignore
+LICENSE
+README.md
 ```
+
+## Models Used
+
+This project utilizes state-of-the-art deep learning models for climate disaster detection and analysis:
+
+- **Fire Detection:**  
+  Uses a ResNet50-based convolutional neural network implemented in Keras. The model is trained to classify images as fire or non-fire, leveraging transfer learning for improved accuracy and faster convergence.  
+  - *Why ResNet50?* ResNet50 is a powerful image classification model known for its deep architecture and skip connections, which help prevent vanishing gradients and improve performance on complex image tasks.
+
+- **Flood Detection:**  
+  Employs both ResNet and Vision Transformer (ViT) architectures for image-based flood detection. The ResNet model provides robust baseline performance, while the ViT explores transformer-based approaches for potentially better generalization on diverse flood imagery.  
+  - *Why ResNet and ViT?* ResNet is a proven standard for image tasks, while ViT leverages self-attention mechanisms, which can capture global context in images, potentially improving detection in challenging scenarios.
+
+- **Sea-Level Rise Analysis:**  
+  Analyzes satellite data (GRACE) in NetCDF format using data analysis and visualization techniques in Jupyter notebooks.  
+  - *Why GRACE data?* GRACE satellite data provides precise measurements of Earth's gravity field, which can be used to infer changes in sea level and mass distribution, making it ideal for scientific analysis of sea-level rise.
+
+## Download Datasets and Trained Models
+
+- **Fire and Flood Datasets:**  
+  Please download the datasets from their respective sources or request access if required. Example sources include [Kaggle Fire Dataset](https://www.kaggle.com/datasets/phylake1337/fire-dataset) and [Kaggle Flood Dataset](https://www.kaggle.com/datasets/ratthachat/flood-image-dataset).  
+  Place the datasets in the corresponding subfolders under `model/Fire/D-Fire/` and `model/Flood/`.
+
+- **Sea-Level Rise Data:**  
+  GRACE satellite data can be downloaded from the [NASA GRACE Data Portal](https://podaac.jpl.nasa.gov/GRACE).
+
+- **Trained Models:**  
+  Pretrained model files (e.g., `.h5`, `.pth`) may be too large for direct inclusion in this repository. You can download them from the following links or request access:
+  - Fire Detection ResNet50: [Download Link or Request Access]
+  - Flood Detection ResNet & ViT: [Download Link or Request Access]
+  - Place the downloaded models in their respective folders as shown in the project structure.
+
+> **Note:** Update the above links with your actual dataset/model URLs or instructions as needed.
 
 ## Components
 
@@ -41,7 +76,7 @@ model/
 
 ### Flood Detection
 
-- [`model/Flood/flood_detection.ipynb`](model/Flood/flood_detection.ipynb): Jupyter notebook for flood detection using deep learning models (ResNet, ViT).
+- [`model/Flood/flood_detection.ipynb`](model/Flood/flood_detection.ipynb): Jupyter notebook for flood detection using deep learning models (ResNet, ViT). Includes model training, evaluation, and comparison.
 - Model checkpoints and metrics: Includes files such as `optimizer_vit.pth`, `resnet_model_checkpoint.pth`, and various CSV/PKL files for evaluation and predictions.
 
 ### Sea-Level Rise Analysis
@@ -83,9 +118,9 @@ model/
 
 ## License
 
-Specify your license here.
+MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
 **Contact:**  
-For questions or contributions, please open an issue or submit a pull request.
+For questions or contributions, please open an issue or submit a pull

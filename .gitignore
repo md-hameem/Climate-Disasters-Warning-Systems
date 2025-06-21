@@ -13,6 +13,9 @@ D-Fire/
 *.h5
 *.pth 
 
+Earthquack Detection/**/*.csv
+
+
 venv/
 # dependencies
 /node_modules
